@@ -1,0 +1,27 @@
+1. Af hverju ætti maður að nota OOP í PHP
+
+Svar: Þú ættir að nota OOP þegar þú ert með stórt verkefni sem myndi nota mörg stök af klasa, eða þegar þú þarft að hópa saman margar functions.
+Þú ættir ekki að nota OOP þegar þú ert með stutt skjal sem gerir tiltölulega einfalda hluti, þar sem að það myndi einungis flækja málin óþarflega
+T.d. ef þú þarft að nota marga klasa saman og gera objects úr þeim -- kannski ertu að skrá user í síðu -- þá væri best að nota OOP.
+En ef þú værir með stutt skjal, til dæmis til að gera automatic header þá þarftu bara að nota procedural programming.
+Munurinn er sá að procedural programming keyrir skjalið skref fyrir skref, en OOP hefur samskipti sín á milli með því að nota objecta.
+
+2. Hver er munurinn á public og private members þegar kemur að:
+    a)property
+    b)methods
+
+    Svar a: Munurinn er sá að hver sem er hefur aðgang að public breytu, en einungis klasinn sem breytan er skilgreind í hefur aðgang að private breytu.
+    Svar b: Hver sem er getur kallað í public aðferð, en einungis aðferðir í klasanum sem aðferðin er skilgreind í hefur aðgang að private aðferð.
+
+3. Hvað er namespaces og Autoloading
+
+Svar: Namespace er "hópur" sem geymir alla þá klasa sem hafa verið gefnir það namespace og þú vísar þá í það namespace þegar þú ætlar að nota klasann.
+Namespace fylgir yfirleitt uppbyggingu skráa(directory structure) og getur verið hentugt þegar maður getur geymt líka klasa í sinni eigin möppu, og þar af leiðandi í sínu eigin namespace-i.
+Autoloading er leið til að losa sig við allar þessar import skipanir í toppnum á skrá.
+Autoloading er skilgreint með sinni eigin skrá og notar það til að finna hvað maður þarf í hvert sinn og keyrir það inn í skjölin án þess að maður þurfi að hafa fyrir því sjálfur.
+
+4. Útskýrðu Interfaces
+
+Svar: Interfaces eru leið til að skilgreina hvað ætti að vera í öllum þeim klösum sem innleiða þau(Implements) eða eins og Laracast náunginn kallaði það "contracts" eða sammningar sem segja fyrir hvað klasarnir þurfa nauðsynlega að hafa.
+Þetta er mjög gagnlegt þegar maður vill vera viss um að ákveðnir klasar þurfa að hafa skilgreindar aðferðir.
+Það væri líka hægt að nota abstract klasa í þessum tilgangi, en það sem er hægt að gera með Interface-um en ekki abstract klösum, er að segja klasa að það sé hægt að constructa hann með hvaða klasa sem innleiðir ákveðið Interface.
